@@ -1,0 +1,33 @@
+{
+  "name": "nodeseal-bn",
+  "version": "0.0.0",
+  "description": "a wrapper of node-seal for BN(big number) usages",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/InternetMaximalism/nodeseal-bn.git"
+  },
+  "keywords": [
+    "node-seal",
+    "cryptography",
+    "BN",
+    "homomophic"
+  ],
+  "type": "module",
+  "author": "Leona Hioki",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/InternetMaximalism/nodeseal-bn/issues"
+  },
+  "homepage": "https://github.com/InternetMaximalism/nodeseal-bn#readme",
+  "dependencies": {
+    "bn.js": "^5.2.1",
+    "elliptic": "^6.5.4",
+    "hmac-drbg": "^1.0.1",
+    "mocha": "^10.2.0",
+    "node-seal": "^5.1.1"
+  }
+}
