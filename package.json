@@ -1,6 +1,6 @@
 {
   "name": "nodeseal-bn",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "a wrapper of node-seal for BN(big number) usages",
   "main": "index.js",
   "scripts": {
