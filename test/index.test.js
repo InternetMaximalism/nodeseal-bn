@@ -2,7 +2,7 @@ import {LWEencrypt, LWEsmul,decryptMatrixToBN, LWEaddMatrix} from '../index.js'
 import {LWEsetup} from '../lib/lwesetup.js'
 import BN from 'bn.js';
 import { strict as assert } from 'node:assert';
-import { randomBytes } from 'crypto';
+//import { randomBytes } from 'crypto';
 
 describe("pow", async function() {
 

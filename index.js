@@ -1,10 +1,10 @@
 import BN from 'bn.js';
-import {bn2array} from './lib/bn2array.js';
-
-export const arraySize = 40;
+import {bn2array,arraySize} from './lib/bn2array.js';
 
 function typeCheckBN(plainBigNum){
-  //if(typeof(plainBigNum.toString().))
+  if(!BN.isBN(plainBigNum)){
+    throw new Error('Type Error: the input is not BN type');
+  }
 }
 
 export async function LWEencrypt(encryptor,plainBigNum,encoder){
