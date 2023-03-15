@@ -54,7 +54,6 @@ export async function LWEsmul(evaluator,encoder,cipherTex1,plainTexBN,seal){
 export async function decryptMatrixToBN(decryptor,matrix,encoder){
 
   var bn0 = new BN(0);
-  console.log(matrix.length);
   for (let i=0;i<arraySize;i++){
       let intArray0 =  decryptor.decrypt(matrix[i]);
       let intArray = encoder.decode(intArray0);
