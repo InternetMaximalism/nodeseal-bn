@@ -6,9 +6,6 @@ import { randomBytes } from 'crypto';
 
 describe("unit tests", async function() {
 
-  console.log('debug')
-    // const setup = await LWEsetup();
-
     // LWEmul function test with random numbers
     it("LWE mul", async function() {
         const setup = await LWEsetup();
@@ -20,7 +17,7 @@ describe("unit tests", async function() {
 
         var cipherTex0 = await LWEencrypt(setup.encryptor,bn0,setup.encoder);
         var cipherTex = await LWEsmul(setup.evaluator,setup.encoder,cipherTex0,bn1,setup.seal);
-        
+
         var bnlast = await decryptMatrixToBN(setup.decryptor,cipherTex.contents,setup.encoder);
 
         assert.equal(bnlast.toString(),bn0.mul(bn1).toString());
