@@ -1,5 +1,6 @@
 import BN from 'bn.js';
 import {bn2array,arraySize} from './lib/bn2array.js';
+export * from "./lib/lwesetup.js";
 
 function typeCheckBN(plainBigNum){
   if(!BN.isBN(plainBigNum)){
