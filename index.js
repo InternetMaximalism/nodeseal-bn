@@ -8,7 +8,7 @@ function typeCheckBN(plainBigNum){
   }
 }
 
-export async function LWEencrypt(encryptor,plainBigNum,encoder){
+export function LWEencrypt(encryptor,plainBigNum,encoder){
 
   typeCheckBN(plainBigNum);
   var plainNumArray = bn2array(plainBigNum);
@@ -19,7 +19,7 @@ export async function LWEencrypt(encryptor,plainBigNum,encoder){
   return encryptor.encrypt(plainNumArrayEncode);
 }
 
-export async function LWEaddMatrix(evaluator,cipherTexMatrix1,cipherTexMatrix2,seal){
+export function LWEaddMatrix(evaluator,cipherTexMatrix1,cipherTexMatrix2,seal){
 
   var cipherTexArray = [];
   for (let i=0;i<arraySize;i++){
@@ -30,7 +30,7 @@ export async function LWEaddMatrix(evaluator,cipherTexMatrix1,cipherTexMatrix2,s
   return {typeinfo:"cipherTexArray", contents:cipherTexArray};
 }
 
-export async function LWEsmul(evaluator,encoder,cipherTex1,plainTexBN,seal){
+export function LWEsmul(evaluator,encoder,cipherTex1,plainTexBN,seal){
 
   const plainArray = bn2array(plainTexBN);
  
@@ -52,7 +52,7 @@ export async function LWEsmul(evaluator,encoder,cipherTex1,plainTexBN,seal){
   return {typeinfo:"cipherTextMetrix", contents:cipherTexArray};
 }
 
-export async function decryptMatrixToBN(decryptor,matrix,encoder){
+export function decryptMatrixToBN(decryptor,matrix,encoder){
 
   var bn0 = new BN(0);
   for (let i=0;i<arraySize;i++){
