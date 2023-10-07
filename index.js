@@ -47,6 +47,7 @@ export function LWEsmul(evaluator, encoder, cipherTex1, plainTexBN, seal) {
     let cipherText = seal.CipherText();
     evaluator.multiplyPlain(cipherTex1, plainTexArrayEncoded, cipherText);
     cipherTexArray.push(cipherText);
+    plainTexArrayEncoded.delete();
   }
 
   return { typeinfo: "cipherTextMetrix", contents: cipherTexArray };
